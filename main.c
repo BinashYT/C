@@ -1,7 +1,7 @@
 #include <stdio.h>
 int main(){
-    int i=100;
-    while(i>=1){
+    int i=999;
+    while(i>=53){
         printf("%d\n", i);
         i--;
     }
