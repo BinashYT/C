@@ -1,16 +1,31 @@
 #include <stdio.h>
-int main(){
-    int i=11, odd=0, even=0;
-    while(i<=224){
-        if(i%2 == 0){
-            even++;
-        }
-        else{
+#include <stdlib.h>
+int main()
+{
+    int n, i, e, odd = 0, even = 0, sum = 0;
+    printf("\t\t\t\t Welcome USER!\n");
+    printf("Please enter integer values only.\n");
+    printf("Enter the initial value: ");
+    scanf("%d", &i);
+    printf("Enter the ending value: ");
+    scanf("%d", &e);
+    if(i>e){
+        printf("The initial value cannot be greater than ending value. Please try again with valid inputs.");
+        exit(1);
+    }
+    for (n = i; n <= e; n++)
+        if (n % 2 == 1)
+        {
             odd++;
         }
-        i++;
-    }
-    printf("There are %d odd numbers between 11 and 224\n", odd );
-    printf("There are %d even numbers between 11 and 224\n", even );
+        else
+        {
+            even++;
+            sum = sum + n;
+        }
+    
+    printf("There are %d odd numbers between %d and %d\n", odd, i, e);
+    printf("There are %d evem numbers between %d and %d\n", even, i, e);
+    printf("The sum of the even numbers between %d and %d is %d", i, e, sum);
     return 0;
 }
