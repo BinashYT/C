@@ -2,12 +2,16 @@
 #include <stdlib.h>
 #include <conio.h>
 int main(){
-    int i, n, fact=1;
-    printf("Enter any integer number: ");
+    int i, a=0, b=1,c, n;
+    printf("Enter the number of terms in fibonacci series: ");
     scanf("%d", &n);
-    for(i=1;i<=n;i++){
-        fact = fact*i;
+    printf("%d ",a);
+    printf("%d ",b);
+    for(i=1;i<=n; i++){
+        c=a+b;
+        printf("%d ", c);
+        a=b;
+        b=c;
     }
-    printf("The factorial of %d is %d", n, fact);
     return 0;
 }
