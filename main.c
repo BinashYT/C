@@ -1,16 +1,27 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <conio.h>
 int main(){
-    int i=11, odd=0, even=0;
-    while(i<=224){
-        if(i%2 == 0){
-            even++;
-        }
-        else{
-            odd++;
-        }
-        i++;
+    int op, i;
+    int n[100];
+    char sign[100];
+    printf("\t\t\t\t Welcome to Calculator!\n");
+    printf("Enter the number of operations to be performed: ");
+    scanf("%d", &op);
+    if(op<=0){
+        printf("Please enter a valid integer value to perform operations on.");
+        exit(2);
     }
-    printf("There are %d odd numbers between 11 and 224\n", odd );
-    printf("There are %d even numbers between 11 and 224\n", even );
-    return 0;
+    for(i=1; i<=op; i++){
+        printf("Enter the number: ");
+        scanf("%d", &n[i]);
+        printf("Enter the respective operational sign(+,-,*,/): ");
+        scanf(" %c", &sign[i]);
+        printf("Enter the number: ");
+        scanf("%d", &n[i+1]);
+    }
+
+    for(i=1;i<=op;i++){
+        
+    }
 }
