@@ -1,20 +1,25 @@
 #include <stdio.h>
 int main(){
-    char name[10][100];
-    for(int i=0;i<10;i++){
-        printf("Enter the name of student %d: ", (i+1));
-        scanf("%s", name[i]);
+    int n;
+    printf("Enter the total numbers: ");
+    scanf("%d", &n);
+    int num[n];
+    for(int i=0;i<n;i++){
+        printf("Enter number %d: ", (i+1));
+        scanf("%d", &num[i]);
     }
-    for(int a=1;a<=15;a++){
-        printf("-");
-    }
-    printf("\n");
-    printf("The list of students whose name starts with letter \"R\"\n");
-    for(int j=0;j<10;j++){
-        char temp = *name[j];
-        if(temp == 'r' || temp == 'R'){
-            printf("%s\n", name[j]);
+    for(int j=0;j<n;j++){
+        for(int a=j;a<n;a++){
+            if(num[a]<num[j]){
+                int temp = num[j];
+                num[j] = num[a];
+                num[a] = temp;
+            }
         }
+    }
+    printf("The numbers in ascending order is: ");
+    for(int b=0;b<n;b++){
+        printf("\n%d", num[b]);
     }
     getchar();
     getchar();
