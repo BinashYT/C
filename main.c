@@ -10,14 +10,14 @@ int main(){
     }
     for(int j=0;j<n;j++){
         for(int a=j;a<n;a++){
-            if(num[a]<num[j]){
+            if(num[a]>num[j]){
                 int temp = num[j];
                 num[j] = num[a];
                 num[a] = temp;
             }
         }
     }
-    printf("The numbers in ascending order is: ");
+    printf("The numbers in descending order is: ");
     for(int b=0;b<n;b++){
         printf("\n%d", num[b]);
     }
