@@ -1,28 +1,21 @@
 #include <stdio.h>
 int main(){
-    int n;
-    printf("Enter the total numbers to be compared: ");
-    scanf("%d",&n);
-    int num[n];
-    for(int i=0;i<n;i++){
-        printf("Enter number %d: ",(i+1));
-        scanf("%d", &num[i]);
-    }
-    int great = num[0], least = num[0];
-    for(int j=1;j<n;j++){
-        if(num[j]>great){
-            great = num[j];
-        }
-        if(num[j]<least){
-            least = num[j];
-        }
+    char name[10][100];
+    for(int i=0;i<10;i++){
+        printf("Enter the name of student %d: ", (i+1));
+        scanf("%s", name[i]);
     }
     for(int a=1;a<=15;a++){
         printf("-");
     }
     printf("\n");
-    printf("The greatest number is %d\n", great);
-    printf("The smallest number is %d", least);
+    printf("The list of students whose name starts with letter \"R\"\n");
+    for(int j=0;j<10;j++){
+        char temp = *name[j];
+        if(temp == 'r' || temp == 'R'){
+            printf("%s\n", name[j]);
+        }
+    }
     getchar();
     getchar();
     return 0;
