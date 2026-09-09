@@ -1,0 +1,7 @@
+WAP to crreate an array according to user requirement and display all the values from that array.
+WAP to create an array according to user requirement and find the sum total and average of the whole array and display the result.
+WAP to enter the records of 100 employees and count the number of employees who's salary is between Rs. 20,000 and Rs. 30,000.
+WAP to enter 'n' numbers and find the greatest and smallest number among them.
+WAP to enter the records of 10 students and find the students who's name starts with the letter 'R'.
+WAP to ente n numbers and sort them in ascending order.
+WAP to ente n numbers and sort them in descending order.
