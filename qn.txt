@@ -5,3 +5,4 @@ WAP to enter 'n' numbers and find the greatest and smallest number among them.
 WAP to enter the records of 10 students and find the students who's name starts with the letter 'R'.
 WAP to enter n numbers and sort them in ascending order.
 WAP to enter n numbers and sort them in descending order.
+WAP to collect marks of 5 different subjects from students and find out min, max and average from the array of the marks.

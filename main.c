@@ -1,26 +1,34 @@
 #include <stdio.h>
 int main(){
     int n;
-    printf("Enter the total numbers: ");
-    scanf("%d", &n);
+    printf("Enter the total number of subjects: ");
+    scanf("%d",&n);
     int num[n];
     for(int i=0;i<n;i++){
-        printf("Enter number %d: ", (i+1));
+        printf("Enter the marks of subject %d: ",(i+1));
         scanf("%d", &num[i]);
     }
-    for(int j=0;j<n;j++){
-        for(int a=j;a<n;a++){
-            if(num[a]>num[j]){
-                int temp = num[j];
-                num[j] = num[a];
-                num[a] = temp;
-            }
+    int great = num[0], least = num[0];
+    for(int j=1;j<n;j++){
+        if(num[j]>great){
+            great = num[j];
+        }
+        if(num[j]<least){
+            least = num[j];
         }
     }
-    printf("The numbers in descending order is: ");
-    for(int b=0;b<n;b++){
-        printf("\n%d", num[b]);
+    int total;
+    for(int m=0;m<n;m++){
+        total += num[m];
     }
+    int avg = total/n;
+    for(int a=1;a<=15;a++){
+        printf("-");
+    }
+    printf("\n");
+    printf("The maximum marks is %d\n", great);
+    printf("The minimum marks is %d\n", least);
+    printf("The average marks is %d\n", avg);
     getchar();
     getchar();
     return 0;
