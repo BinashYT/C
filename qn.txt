@@ -7,3 +7,4 @@ WAP to enter n numbers and sort them in ascending order.
 WAP to enter n numbers and sort them in descending order.
 WAP to collect marks of 5 different subjects from students and find out min, max and average from the array of the marks.
 WAP to collect marks of different subjects from students and print the result of those subjects who's mark is above average
+WAP to create a 2d array and display the data of the array
