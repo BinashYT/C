@@ -9,3 +9,4 @@ WAP to collect marks of 5 different subjects from students and find out min, max
 WAP to collect marks of different subjects from students and print the result of those subjects who's mark is above average
 WAP to create a 2d array and display the data of the array
 WAP to create a 2x3 array and display the data of the array
+WAP to add a matrix of order 2x3 with another matrix of same order and store the result into matrix with same order and display the data of the resultant matrix
