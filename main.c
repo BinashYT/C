@@ -1,21 +1,42 @@
 #include <stdio.h>
 int main()
 {
-    int n[2][3] = {{1, 2, 3}, {4, 5, 6}};
-    int g[2][3] = {{1, 2, 3}, {4, 5, 6}};
-    int e[2][3];
-    for (int a = 0; a < 2; a++)
+    int n[2][3];
+    for (int i = 0; i < 2; i++)
     {
-        for (int b = 0; b < 3; b++)
+        for (int j = 0; j < 3; j++)
         {
-            e[a][b] = n[a][b] + g[a][b];
+            printf("Enter the element %d of column %d: ", (j + 1), (i + 1));
+            scanf("%d", &n[i][j]);
         }
     }
-    for (int a = 0; a < 2; a++)
+    for (int q = 0; q <= 15; q++)
     {
-        for (int b = 0; b < 3; b++)
-        {
-            printf("%d\t", e[a][b]);
-        }
+        printf("-");
     }
+    printf("\n");
+
+for(int r=0;r<2;r++){
+    for(int s=0;s<3;s++){
+        printf("%d\t", n[r][s]);
+    }
+    printf("\n");
+}
+    for (int q = 0; q <= 15; q++)
+    {
+    printf("-");
+}
+printf("\n");
+int sum = 0;
+for (int a = 0; a < 3; a++)
+{
+    for (int b = 0; b < 2; b++)
+    {
+        sum += n[b][a];
+    }
+    printf("Sum of all the elements of column %d of the matrix is: %d\n ", (a+1), sum);
+}
+getchar();
+getchar();
+return 0;
 }

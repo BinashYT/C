@@ -10,3 +10,5 @@ WAP to collect marks of different subjects from students and print the result of
 WAP to create a 2d array and display the data of the array
 WAP to create a 2x3 array and display the data of the array
 WAP to add a matrix of order 2x3 with another matrix of same order and store the result into matrix with same order and display the data of the resultant matrix
+WAP to ask the user to enter the elements of a matrix of order 2x3 and add all the elements of each column.
+WAP to ask the user to enter the elements of a matrix of order 2x3 and add all the elements of each row.
