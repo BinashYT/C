@@ -27,14 +27,14 @@ for(int r=0;r<2;r++){
     printf("-");
 }
 printf("\n");
-int sum = 0;
-for (int a = 0; a < 3; a++)
+for (int a = 0; a < 2; a++)
 {
-    for (int b = 0; b < 2; b++)
+    int sum = 0;
+    for (int b = 0; b < 3; b++)
     {
-        sum += n[b][a];
+        sum += n[a][b];
     }
-    printf("Sum of all the elements of column %d of the matrix is: %d\n ", (a+1), sum);
+    printf("Sum of all the elements of row %d of the matrix is: %d\n ", (a+1), sum);
 }
 getchar();
 getchar();
