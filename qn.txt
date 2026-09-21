@@ -12,3 +12,4 @@ WAP to create a 2x3 array and display the data of the array
 WAP to add a matrix of order 2x3 with another matrix of same order and store the result into matrix with same order and display the data of the resultant matrix
 WAP to ask the user to enter the elements of a matrix of order 2x3 and add all the elements of each column.
 WAP to ask the user to enter the elements of a matrix of order 2x3 and add all the elements of each row.
+WAP to ask user the number of students and display the names of those students whose name contains more than 8 characters.
