@@ -1,24 +1,32 @@
 #include <stdio.h>
 #include <string.h>
-int main(){
-    char name[3][15] = {
-        {"Mohan"},
-        {"Sohan"},
-        {"Rohan"}
-    };
-    char temp[15];
-    for(int i=0;i<2;i++){
-        for(int j=(i+1);j<3;j++){
-            if(strcmp(name[i], name[j])>0){
-                strcpy(temp, name[j]);
-                strcpy(name[j], name[i]);
-                strcpy(name[i], temp);
+int main()
+{
+    printf("Enter the number of students: ");
+    int n;
+    scanf("%d", &n);
+    char name[n][25];
+    for (int i = 0; i < n; i++)
+    {
+        printf("Enter the name of student %d: ", (i + 1));
+        scanf(" %[^\n]", name[i]);
+    }
+    for (int i = 0; i < (n - 1); i++)
+    {
+        for (int j = 0; j < (n - 1); j++)
+        {
+            char temp[25];
+            strcpy(temp, name[j]);
+            if (strcmp(name[j], name[j + 1]) > 0)
+            {
+                strcpy(name[j], name[j + 1]);
+                strcpy(name[j + 1], temp);
             }
         }
     }
-
-    for(int a=0;a<3;a++){
+    printf("The sorted array of names of the students is: \n");
+    for (int a = 0; a < n; a++)
+    {
         printf("%s\n", name[a]);
     }
-    return 0;
 }
