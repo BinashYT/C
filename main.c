@@ -1,32 +1,42 @@
 #include <stdio.h>
-#include <string.h>
+#include <stdlib.h>
 int main()
 {
-    printf("Enter the number of students: ");
-    int n;
-    scanf("%d", &n);
-    char name[n][25];
-    for (int i = 0; i < n; i++)
+    char sign;
+    int a, b, result;
+    printf("\t\t\t Welcome to Calculator!\n");
+    printf("Enter the first number: ");
+    scanf("%d", &a);
+    printf("Enter the arithmetic operator (+,-,*,/): ");
+    scanf(" %c", &sign);
+    printf("Enter the second number: ");
+    scanf("%d", &b);
+
+    switch (sign)
     {
-        printf("Enter the name of student %d: ", (i + 1));
-        scanf(" %[^\n]", name[i]);
-    }
-    for (int i = 0; i < (n - 1); i++)
-    {
-        for (int j = 0; j < (n - 1); j++)
-        {
-            char temp[25];
-            strcpy(temp, name[j]);
-            if (strcmp(name[j], name[j + 1]) > 0)
-            {
-                strcpy(name[j], name[j + 1]);
-                strcpy(name[j + 1], temp);
-            }
+    case '+':
+        result = a + b;
+        break;
+    case '-':
+        result = a - b;
+        break;
+    case '*':
+        result = a * b;
+        break;
+    case '/':
+        if(b==0){
+            printf("Math Error! Cannot divide by zero.");
+            exit(1);
         }
+        else{
+            result = a/b;
+        }
+        break;
+    default:
+        printf("Please enter a valid number or operator.");
+        break;
     }
-    printf("The sorted array of names of the students is: \n");
-    for (int a = 0; a < n; a++)
-    {
-        printf("%s\n", name[a]);
-    }
+
+    printf("Output: %d", result);
+    return 0;
 }

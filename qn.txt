@@ -15,3 +15,4 @@ WAP to ask the user to enter the elements of a matrix of order 2x3 and add all t
 WAP to ask user the number of students and display the names of those students whose name contains more than 8 characters.
 WAP to sort a string array in ascending order
 WAP to collect n number of names of student, store them into an aray, sort in descending order and display the sorted array.
+WAP to create a calculator in C that can perform basic arithmetic using switch case
