@@ -1,19 +1,21 @@
 #include <stdio.h>
 int main(void){
-    int a[10];
-    for (int i=1; i<=10; i++){
-        printf("Enter the age of employee %d: ", i);
-        scanf("%d", &a[i]);
+    int n;
+    printf("Enter the size of array: ");
+    scanf("%d", &n);
+    
+    int arr[n];
+    for(int i=0;i<n;i++){
+        printf("Enter value %d: ", (i+1));
+        scanf("%d", &arr[i]);
     }
 
-    for(int k=0;k<=20;k++){
-        printf("-");
+    int sum=0;
+    for(int j=0;j<n;j++){
+        sum=sum+arr[j];
     }
-    printf("\n");
 
-    for (int j=1;j<=10;j++){
-        if(a[j] < 35){
-            printf("Employee %d meets the given criteria!\n", j);
-        }
-    }
+    printf("The sum of the array is: %d", sum);
+
+    return 0;
 }

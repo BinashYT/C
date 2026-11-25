@@ -19,4 +19,5 @@ WAP to create a calculator in C that can perform basic arithmetic using switch c
 WAP to collect marks of nth number of students, store them into an array, find out average marks from that array. Now display the result of the student whose marks is above average only.
 WAP to accept the age of 10 different employees and count the number of employees whose age is greater than or equal to 60.
 WAP to accept the age of 10 different employees and count the number of employees whose age is less than 35.
+WAP to store N numbers in array and print out the sum.
 
