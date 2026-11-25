@@ -1,21 +1,25 @@
 #include <stdio.h>
 int main(void){
-    int n;
-    printf("Enter the size of array: ");
-    scanf("%d", &n);
-    
-    int arr[n];
-    for(int i=0;i<n;i++){
+    int arr[10];
+    for(int i=0;i<10;i++){
         printf("Enter value %d: ", (i+1));
         scanf("%d", &arr[i]);
     }
 
-    int sum=0;
-    for(int j=0;j<n;j++){
-        sum=sum+arr[j];
+    int temp;
+    for(int i=0;i<9;i++){
+        for(int j=0;j<9-i;j++){
+            if(arr[j+1] > arr[j]){
+            temp = arr[j];
+            arr[j] = arr[j+1];
+            arr[j+1] = temp;
+            }
+        }   
     }
 
-    printf("The sum of the array is: %d", sum);
+    for(int k=0;k<10;k++){
+        printf("%d ", arr[k]);
+    }
 
     return 0;
 }
