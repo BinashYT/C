@@ -12,7 +12,7 @@ int main(void){
     printf("\n");
 
     for (int j=1;j<=10;j++){
-        if(a[j] >= 60){
+        if(a[j] < 35){
             printf("Employee %d meets the given criteria!\n", j);
         }
     }
