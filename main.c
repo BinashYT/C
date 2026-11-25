@@ -1,42 +1,31 @@
 #include <stdio.h>
-#include <stdlib.h>
-int main()
-{
-    char sign;
-    int a, b, result;
-    printf("\t\t\t Welcome to Calculator!\n");
-    printf("Enter the first number: ");
-    scanf("%d", &a);
-    printf("Enter the arithmetic operator (+,-,*,/): ");
-    scanf(" %c", &sign);
-    printf("Enter the second number: ");
-    scanf("%d", &b);
+int main(void){
+    int n;
+    printf("Enter the number of students: ");
+    scanf("%d", &n);
+    int mark[n];
+    int a=1;
 
-    switch (sign)
-    {
-    case '+':
-        result = a + b;
-        break;
-    case '-':
-        result = a - b;
-        break;
-    case '*':
-        result = a * b;
-        break;
-    case '/':
-        if(b==0){
-            printf("Math Error! Cannot divide by zero.");
-            exit(1);
-        }
-        else{
-            result = a/b;
-        }
-        break;
-    default:
-        printf("Please enter a valid number or operator.");
-        break;
+    while (a<=n){
+        printf("Enter the marks of student %d: ", a);
+        scanf("%d", &mark[a-1]);
+        printf("\n");
+        a++;
+    }
+    
+    int sum=0;
+    for(int i=0;i<n;i++){
+        sum=sum+mark[i];
     }
 
-    printf("Output: %d", result);
-    return 0;
+    int avg = sum/n;
+
+    for(int k=0;k<n;k++){
+        if(mark[k] >= avg){
+            printf("Student %d scored above average!\n", (k+1));
+        }
+        else{
+            printf("Student %d scored below average!\n", (k+1));
+        }
+    }
 }

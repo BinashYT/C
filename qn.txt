@@ -16,3 +16,4 @@ WAP to ask user the number of students and display the names of those students w
 WAP to sort a string array in ascending order
 WAP to collect n number of names of student, store them into an aray, sort in descending order and display the sorted array.
 WAP to create a calculator in C that can perform basic arithmetic using switch case
+WAP to collect marks of nth number of students, store them into an array, find out average marks from that array. Now display the result of the student whose marks is above average only.
