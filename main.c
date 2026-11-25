@@ -1,24 +1,19 @@
 #include <stdio.h>
 int main(void){
-    int arr[10];
-    for(int i=0;i<10;i++){
-        printf("Enter value %d: ", (i+1));
-        scanf("%d", &arr[i]);
+    int arr[2][3];
+    for(int i=0;i<2;i++){
+        for(int j=0;j<3;j++){
+            printf("Enter the value for %d, %d: ", i,j);
+            scanf("%d", &arr[i][j]);
+        }
     }
-
-    int temp;
-    for(int i=0;i<9;i++){
-        for(int j=0;j<9-i;j++){
-            if(arr[j+1] > arr[j]){
-            temp = arr[j];
-            arr[j] = arr[j+1];
-            arr[j+1] = temp;
-            }
-        }   
-    }
-
-    for(int k=0;k<10;k++){
-        printf("%d ", arr[k]);
+    
+    printf("The transpose of the array is: \n");
+    for(int i=0;i<3;i++){
+        for(int j=0;j<2;j++){
+            printf("%d ", arr[j][i]);
+        }
+        printf("\n");
     }
 
     return 0;
