@@ -1,22 +1,29 @@
 #include <stdio.h>
+#include <string.h>
 int main(void){
-    int arr[3][3];
-    for(int i=0;i<3;i++){
-        for(int j=0;j<3;j++){
-            printf("Enter the value for %d, %d: ", i,j);
-            scanf("%d", &arr[i][j]);
-        }
+    int n;
+    printf("Enter quantity of inputs: ");
+    scanf("%d", &n);
+
+    int arr[n];
+    for(int i=0;i<n;i++){
+        printf("Enter number %d: ", (i+1));
+        scanf("%d", &arr[i]);
     }
-    
-    int sum=0;
-    printf("The sum of the array is: \n");
-    for(int i=0;i<3;i++){
-        for(int j=0;j<3;j++){
-          sum=sum+arr[i][j];
+    int a=0;
+    for(int j=0;j<n;j++){
+        if(arr[j]%2 != 0){
+            printf("The number %d is odd!\n", (j+1));
+            a++;
         }
     }
 
-    printf("The sum of the array is: %d", sum);
+    if(a>0){
+        printf("Hence, there are %d odd numbers!", a);
+    }
+    else{
+        printf("Hence, there are no odd numbers!");
+    }
 
     return 0;
 }
