@@ -1,30 +1,21 @@
 #include <stdio.h>
 int main(void){
     int n;
-    printf("Enter the total number of students: ");
+    printf("Enter the number of students: ");
     scanf("%d", &n);
 
-    int marks[n];
+    char name[n][30];
     for(int i=0;i<n;i++){
-        printf("Enter the mark for student %d: ", (i+1));
-        scanf("%d", &marks[i]);
+        printf("Enter the name of student %d: ", (i+1));
+        scanf(" %29[^\n]", name[i]);
     }
 
-    int sum=0;
     for(int j=0;j<n;j++){
-        sum=sum+marks[j];
-    }
-
-    int avg = sum/n;
-
-    int count=0;
-    for(int k=0;k<n;k++){
-        if(marks[k]>avg){
-            count++;
+        char letter = *name[j];
+        if(letter == 'R'|| letter == 'r'){
+            printf("The name %s starts from letter R!\n", name[j]);
         }
     }
-
-    printf("%d students have scored more than average!", count);
 
     return 0;
 }
