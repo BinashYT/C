@@ -1,29 +1,30 @@
 #include <stdio.h>
-#include <string.h>
 int main(void){
     int n;
-    printf("Enter quantity of inputs: ");
+    printf("Enter the total number of students: ");
     scanf("%d", &n);
 
-    int arr[n];
+    int marks[n];
     for(int i=0;i<n;i++){
-        printf("Enter number %d: ", (i+1));
-        scanf("%d", &arr[i]);
+        printf("Enter the mark for student %d: ", (i+1));
+        scanf("%d", &marks[i]);
     }
-    int a=0;
+
+    int sum=0;
     for(int j=0;j<n;j++){
-        if(arr[j]%2 != 0){
-            printf("The number %d is odd!\n", (j+1));
-            a++;
+        sum=sum+marks[j];
+    }
+
+    int avg = sum/n;
+
+    int count=0;
+    for(int k=0;k<n;k++){
+        if(marks[k]>avg){
+            count++;
         }
     }
 
-    if(a>0){
-        printf("Hence, there are %d odd numbers!", a);
-    }
-    else{
-        printf("Hence, there are no odd numbers!");
-    }
+    printf("%d students have scored more than average!", count);
 
     return 0;
 }

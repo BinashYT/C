@@ -24,6 +24,7 @@ WAP to accept 10 different numbers in array and sort in descending order.
 WAP to enter elements for 2x3 matrix and display its transpose.
 WAP to enter elements for 3x3 matrix and display its sum.
 WAP to calculate total odd numbers from an array of N numbers provided by the user.
+WAP to get mark of N number of students, store them in an array and count how many students have secured more than average.
 
 
 
